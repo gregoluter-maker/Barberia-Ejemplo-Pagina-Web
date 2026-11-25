@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aureum &amp; Blade | Barbería de autor en Villa Crespo</title>
+<meta name="description" content="Barbería de autor en Villa Crespo, Buenos Aires. Corte a tijera y navaja, toalla caliente y diseño de barba. Reservá tu cita online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+<!-- Datos para Google: reemplazar con los datos reales del negocio -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BarberShop","name":"Aureum & Blade","address":{"@type":"PostalAddress","streetAddress":"Calle Ejemplo 1234","addressLocality":"Villa Crespo","addressRegion":"CABA","addressCountry":"AR"},"openingHours":["Tu-Fr 11:00-20:00","Sa 10:00-19:00"]}</script>
+<style>
+/* Paleta y base */
+:root{--c0:#0A0A0A;--c1:#141414;--gold:#D4AF37;--cu:#B87333;--bone:#F5F5F0;--ln:rgba(212,175,55,.2);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--c0);color:var(--bone);font:400 1rem/1.7 "Plus Jakarta Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;margin:0;line-height:1}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.fx,.fx *{cursor:none!important}
+/* Grano de película */
+.grain{position:fixed;inset:-50%;z-index:90;pointer-events:none;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:gr .9s steps(6) infinite}
+@keyframes gr{0%{transform:translate(0,0)}20%{transform:translate(-6%,4%)}40%{transform:translate(5%,-7%)}60%{transform:translate(-4%,8%)}80%{transform:translate(7%,3%)}100%{transform:translate(0,0)}}
+@media (prefers-reduced-motion:reduce){.grain{animation:none}}
+/* Preloader y cursor */
+.pre{position:fixed;inset:0;z-index:100;background:var(--c0);display:grid;place-items:center;font:500 clamp(4rem,16vw,11rem)/1 "Cormorant Garamond",Georgia,serif;color:var(--gold)}
+.cur{position:fixed;left:0;top:0;z-index:95;width:14px;height:14px;border-radius:50%;background:var(--gold);pointer-events:none;display:grid;place-items:center;font:600 .68rem "Plus Jakarta Sans",sans-serif;color:var(--c0);opacity:0}
+.pv{position:fixed;left:0;top:0;z-index:60;width:220px;height:280px;padding:1rem;pointer-events:none;opacity:0;border:1px solid var(--ln);background:linear-gradient(160deg,var(--cu),#2a1a0c 60%,var(--c0));display:grid;place-items:center;text-align:center;font:500 1.9rem/1.1 "Cormorant Garamond",Georgia,serif}
+@media (hover:none),(pointer:coarse){.cur,.pv{display:none}}
+/* Navbar glass */
+.nav{position:fixed;left:1rem;right:1rem;top:calc(env(safe-area-inset-top,0px) + .75rem);z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.55rem .6rem .55rem 1.25rem;border:1px solid var(--ln);border-radius:999px;background:rgba(20,20,20,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.logo{font-size:1.45rem;font-weight:600}
+.nav nav{display:flex;gap:1.75rem;font-size:.9rem}
+.nav nav a:hover{color:var(--gold)}
+@media (max-width:760px){.nav nav{display:none}}
+.btn{display:inline-block;border:1px solid var(--gold);color:var(--gold);background:transparent;padding:.8rem 1.5rem;border-radius:999px;font:600 .9rem "Plus Jakarta Sans",sans-serif;cursor:pointer}
+.btn:hover{background:var(--gold);color:var(--c0)}
+/* Hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:8rem 1.25rem 4rem;overflow:hidden}
+.hero>*{position:relative;z-index:1}
+.hero>.hbg{position:absolute;z-index:0;inset:-10% 0;filter:grayscale(1) contrast(1.3);background:radial-gradient(60% 50% at 70% 35%,#444,var(--c0) 70%),repeating-linear-gradient(115deg,#1c1c1c 0 2px,transparent 2px 22px)}
+.hbg svg{position:absolute;right:5%;top:20%;width:min(62vw,540px)}
+.hero h1{font-size:clamp(3rem,11vw,9.5rem);margin-bottom:1.5rem}
+.ln{display:block;overflow:hidden;padding-bottom:.08em}
+.ln>span{display:block}
+.sub{max-width:44ch;color:#c9c9c0;font-size:1.1rem;margin:0 0 1.75rem}
+/* Secciones */
+section{border-top:1px solid var(--ln)}
+.mf{display:grid;grid-template-columns:1.6fr 1fr;gap:3rem;padding:8rem 1.25rem;align-items:center}
+.mt{font:500 clamp(1.8rem,4.6vw,3.6rem)/1.15 "Cormorant Garamond",Georgia,serif;margin:0}
+.mt span{opacity:.18}
+.tile{aspect-ratio:4/5;border:1px solid var(--ln);background:radial-gradient(80% 60% at 50% 30%,#2b2b2b,var(--c1));display:grid;place-items:center;padding:1.5rem}
+@media (max-width:760px){.mf{grid-template-columns:1fr;padding:5rem 1.25rem}}
+.sv,.tm{padding:6rem 1.25rem}
+.sv h2,.tm h2,.tt h2{font-size:clamp(2.4rem,6vw,4.5rem);margin-bottom:2.5rem}
+.sv ul{list-style:none;margin:0;padding:0}
+.svc{display:grid;grid-template-columns:1fr auto;gap:.4rem 2rem;padding:1.6rem 0;border-top:1px solid var(--ln)}
+.svc:last-child{border-bottom:1px solid var(--ln)}
+.svc h3{font-size:clamp(1.7rem,4vw,2.7rem)}
+.svc p{margin:0;color:#b8b8b0;max-width:52ch}
+.svc .m{grid-column:2;grid-row:1/3;text-align:right;font-weight:600;align-self:center}
+.svc small{display:block;color:var(--cu);font-weight:400}
+.note{color:#8d8d86;font-size:.85rem}
+/* Lookbook horizontal */
+.lb{height:100svh;display:flex;align-items:center;overflow-x:auto}
+.trk{display:flex;gap:1.5rem;padding:0 1.25rem;align-items:center}
+.tt{flex:0 0 min(80vw,420px)}
+.tt h2{margin:0}
+.sl{flex:0 0 min(72vw,400px);aspect-ratio:3/4;border:1px solid var(--ln);background:var(--g);filter:grayscale(1);transition:filter .6s,transform .6s;display:flex;align-items:flex-end;padding:1.25rem;font:500 1.9rem/1 "Cormorant Garamond",Georgia,serif}
+.sl:hover{filter:none;transform:scale(1.02)}
+/* Equipo */
+.tm{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.tm h2{grid-column:1/-1;margin-bottom:1rem}
+.cd{background:var(--c1);border:1px solid var(--ln);padding:1.5rem}
+.mo{width:96px;height:96px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font:500 2rem "Cormorant Garamond",Georgia,serif;color:var(--gold);margin-bottom:1rem}
+.cd h3{font-size:1.7rem;margin-bottom:.3rem}
+.cd p{margin:0 0 .8rem;color:#b8b8b0}
+.cd a{font-size:.85rem;color:var(--cu);margin-right:.8rem}
+/* Footer */
+footer{padding:6rem 1.25rem 2rem;border-top:1px solid var(--ln);overflow:hidden}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;align-items:start}
+.fg h3{font-size:1.7rem;margin-bottom:.5rem}
+.fg p{margin:0}
+.fg svg{width:100%;border:1px solid var(--ln)}
+.big{font:500 10vw/1 "Cormorant Garamond",Georgia,serif;white-space:nowrap;margin:3.5rem 0 1rem}
+/* Modal de reserva */
+.md{position:fixed;inset:0;z-index:80;display:none;place-items:center;padding:1rem;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.md.on{display:grid}
+.mb{width:min(480px,100%);max-height:90svh;overflow:auto;background:var(--c1);border:1px solid var(--ln);padding:1.75rem}
+.mb h2{font-size:2.2rem}
+label{display:block;margin:1rem 0 .3rem;font-size:.9rem;color:#b8b8b0}
+select,input{width:100%;padding:.7rem;background:var(--c0);color:var(--bone);border:1px solid var(--ln);border-radius:4px;font:inherit}
+.mb p{margin:1.5rem 0 0}
+.ok{display:none;text-align:center}
+.ok svg{width:76px;margin-bottom:.5rem}
+.ok path{stroke-dasharray:60;stroke-dashoffset:60;animation:dr .7s .15s forwards}
+@keyframes dr{to{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="pre" aria-hidden="true"><span><b id="cnt">0</b>%</span></div>
+<div class="cur" aria-hidden="true"></div>
+<div class="pv" aria-hidden="true"></div>
+
+<header class="nav">
+  <a href="#top" class="logo serif">Aureum &amp; Blade</a>
+  <nav><a href="#filosofia">Filosofía</a><a href="#servicios">Servicios</a><a href="#lookbook">Lookbook</a><a href="#equipo">Equipo</a></nav>
+  <button class="btn mag" type="button" data-book data-cur="RESERVAR">Reservar</button>
+</header>
+
+<main id="top">
+  <section class="hero" style="border-top:0">
+    <div class="hbg" aria-hidden="true">
+      <svg viewBox="0 0 300 120" fill="none" stroke="#D4AF37" stroke-width="1.5"><path d="M10 70L190 28Q200 26 204 34L206 62L12 82Z"/><path d="M206 52L262 40Q280 38 288 52Q292 66 278 72L206 72"/><circle cx="270" cy="55" r="5"/><path d="M30 76L190 44" opacity=".5"/></svg>
+    </div>
+    <h1><span class="ln"><span>El arte del corte,</span></span><span class="ln"><span>elevado a ritual</span></span></h1>
+    <p class="fade sub">Barbería de autor en Villa Crespo. Corte a tijera y navaja, toalla caliente y una silla reservada para vos.</p>
+    <div class="fade"><button class="btn mag" type="button" data-book data-cur="RESERVAR">Reservar cita</button></div>
+  </section>
+
+  <section class="mf" id="filosofia">
+    <h2 class="mt">Creemos que un corte no se apura. Se piensa, se mide y se firma. Acá el tiempo se detiene entre el vapor, el filo y el espejo, y cada visita termina con una versión tuya que ya sabías que existía.</h2>
+    <div class="tile" aria-hidden="true">
+      <svg viewBox="0 0 120 160" width="70%" fill="none" stroke="#D4AF37" stroke-width="1.5"><circle cx="38" cy="124" r="14"/><circle cx="82" cy="124" r="14"/><path d="M46 112L84 20M74 112L36 20"/></svg>
+    </div>
+  </section>
+
+  <section class="sv" id="servicios">
+    <h2>Servicios</h2>
+    <ul>
+      <li class="svc" data-cur="VER"><h3>Corte de Autor</h3><p>Consulta de estilo, corte a tijera y máquina, y acabado con navaja.</p><div class="m">$32.000<small>60 min</small></div></li>
+      <li class="svc" data-cur="VER"><h3>Ritual de Toalla Caliente</h3><p>Vapor, aceites esenciales y afeitado clásico con navaja.</p><div class="m">$18.000<small>30 min</small></div></li>
+      <li class="svc" data-cur="VER"><h3>Diseño de Barba</h3><p>Perfilado, simetría y bálsamo para que se mantenga cuidada.</p><div class="m">$22.000<small>40 min</small></div></li>
+      <li class="svc" data-cur="VER"><h3>Experiencia Aureum</h3><p>Corte, barba, ritual completo y una bebida de la casa.</p><div class="m">$65.000<small>120 min</small></div></li>
+    </ul>
+    <p class="note">Precios en pesos argentinos, de ejemplo.</p>
+  </section>
+
+  <section class="lb" id="lookbook">
+    <div class="trk">
+      <div class="tt"><h2>Lookbook</h2></div>
+      <div class="sl" data-cur="VER" style="--g:linear-gradient(160deg,#B87333,#1b0f06)">Fade clásico</div>
+      <div class="sl" data-cur="VER" style="--g:linear-gradient(160deg,#D4AF37,#1a1405)">Pompadour</div>
+      <div class="sl" data-cur="VER" style="--g:linear-gradient(160deg,#2f6f6a,#06130f)">Barba de autor</div>
+      <div class="sl" data-cur="VER" style="--g:linear-gradient(160deg,#8a2f2f,#140505)">Toalla caliente</div>
+      <div class="sl" data-cur="VER" style="--g:linear-gradient(160deg,#3b4a8a,#050814)">El local</div>
+    </div>
+  </section>
+
+  <section class="tm" id="equipo">
+    <h2>Maestros barberos</h2>
+    <article class="cd"><div class="mo" aria-hidden="true">MR</div><h3>Mateo R.</h3><p>Fade y navaja</p><a href="#top">Instagram</a></article>
+    <article class="cd"><div class="mo" aria-hidden="true">LF</div><h3>Lucía F.</h3><p>Tijera y diseño</p><a href="#top">Instagram</a></article>
+    <article class="cd"><div class="mo" aria-hidden="true">SV</div><h3>Santiago V.</h3><p>Barba y ritual</p><a href="#top">Instagram</a></article>
+  </section>
+</main>
+
+<footer>
+  <div class="fg">
+    <div><h3>Dónde</h3><p>Calle Ejemplo 1234, Villa Crespo, Ciudad de Buenos Aires.</p></div>
+    <div><h3>Horarios</h3><p>Martes a viernes, 11:00 a 20:00<br>Sábado, 10:00 a 19:00<br>Domingo y lunes, cerrado</p></div>
+    <svg viewBox="0 0 300 170" role="img" aria-label="Mapa estilizado"><rect width="300" height="170" fill="#0e0e0e"/><path d="M0 40H300M0 90H300M0 135H300M60 0V170M140 0V170M220 0V170" stroke="#2a2a2a"/><path d="M0 120L110 70L300 100" stroke="#D4AF37" stroke-opacity=".4" fill="none"/><circle cx="150" cy="82" r="6" fill="#D4AF37"/><circle cx="150" cy="82" r="14" fill="none" stroke="#D4AF37" stroke-opacity=".5"/></svg>
+  </div>
+  <div class="big" aria-hidden="true">AUREUM &amp; BLADE</div>
+  <p class="note">Sitio de demostración con datos ficticios. Nombre, dirección, precios y teléfono se reemplazan por los del negocio.</p>
+</footer>
+
+<!-- Modal de reserva: la confirmación se simula en el navegador -->
+<div class="md" role="dialog" aria-modal="true" aria-label="Reservar cita">
+  <div class="mb">
+    <form id="bf">
+      <h2>Reservar cita</h2>
+      <label for="s">Servicio</label>
+      <select id="s" name="s"><option>Corte de Autor</option><option>Ritual de Toalla Caliente</option><option>Diseño de Barba</option><option>Experiencia Aureum</option></select>
+      <label for="b">Barbero</label>
+      <select id="b" name="b"><option>Mateo R.</option><option>Lucía F.</option><option>Santiago V.</option></select>
+      <label for="d">Fecha</label>
+      <input id="d" name="d" type="date" required>
+      <label for="h">Hora</label>
+      <select id="h" name="h"><option>11:00</option><option>12:00</option><option>13:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option></select>
+      <p><button class="btn" type="submit">Confirmar reserva</button> <button class="btn" type="button" data-x>Cancelar</button></p>
+    </form>
+    <div class="ok">
+      <svg viewBox="0 0 52 52" fill="none" stroke="#D4AF37" stroke-width="3"><circle cx="26" cy="26" r="23" opacity=".4"/><path d="M15 27l8 8 14-16"/></svg>
+      <h2>Reserva confirmada</h2>
+      <p id="sum"></p>
+      <p class="note">Demo: la reserva se simula en el navegador.</p>
+      <p><a id="wa" class="btn" href="https://wa.me/5491100000000" rel="noopener">Enviar por WhatsApp</a> <button class="btn" type="button" data-x>Cerrar</button></p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script>
+(function(){
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const pre=$('.pre'),md=$('.md'),f=$('#bf'),ok=$('.ok');
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+let lenis;
+const done=()=>pre&&pre.remove();
+$('#d').min=new Date().toISOString().slice(0,10);
+
+/* Modal de reserva */
+const open=()=>{md.classList.add('on');f.style.display='';ok.style.display='none';lenis&&lenis.stop();$('#s').focus()};
+const close=()=>{md.classList.remove('on');lenis&&lenis.start()};
+$$('[data-book]').forEach(b=>b.addEventListener('click',open));
+md.addEventListener('click',e=>{if(e.target===md||e.target.dataset.x!==undefined)close()});
+addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+f.addEventListener('submit',e=>{
+  e.preventDefault();
+  const d=new FormData(f),t=d.get('s')+' con '+d.get('b')+', el '+d.get('d')+' a las '+d.get('h');
+  $('#sum').textContent=t;
+  $('#wa').href='https://wa.me/5491100000000?text='+encodeURIComponent('Hola, quiero reservar: '+t);
+  f.style.display='none';ok.style.display='block';
+});
+
+/* Si las librerías no cargan o se pide menos movimiento, el sitio funciona sin animaciones */
+if(!(window.gsap&&window.ScrollTrigger&&window.Lenis)||rm){done();return}
+gsap.registerPlugin(ScrollTrigger);
+
+/* Scroll suave (Lenis) sincronizado con GSAP */
+lenis=new Lenis();lenis.stop();
+lenis.on('scroll',ScrollTrigger.update);
+gsap.ticker.add(t=>lenis.raf(t*1000));
+gsap.ticker.lagSmoothing(0);
+$$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=$(a.getAttribute('href'));if(t){e.preventDefault();lenis.scrollTo(t)}}));
+
+/* Preloader 0% a 100% y aparición del hero por líneas */
+const o={v:0};
+gsap.set('.ln>span',{yPercent:110});
+gsap.timeline()
+  .to(o,{v:100,duration:1.6,ease:'power2.inOut',onUpdate:()=>{$('#cnt').textContent=Math.round(o.v)}})
+  .to(pre,{yPercent:-100,duration:.9,ease:'power4.inOut',onComplete:()=>{done();lenis.start()}})
+  .to('.ln>span',{yPercent:0,duration:1.1,stagger:.12,ease:'power4.out'},'-=.45')
+  .from('.fade',{opacity:0,y:20,duration:.8,stagger:.12},'-=.6');
+
+/* Parallax del fondo del hero */
+gsap.to('.hbg',{yPercent:18,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+
+/* Manifiesto: las palabras se iluminan al hacer scroll */
+const mt=$('.mt');
+mt.innerHTML=mt.textContent.trim().split(/\s+/).map(w=>'<span>'+w+'</span>').join(' ');
+gsap.to('.mt span',{opacity:1,stagger:.12,ease:'none',scrollTrigger:{trigger:mt,start:'top 80%',end:'bottom 50%',scrub:true}});
+
+/* Lookbook: scroll horizontal impulsado por el scroll vertical */
+const lb=$('.lb'),tk=$('.trk'),dist=()=>tk.scrollWidth-innerWidth;
+lb.style.overflowX='hidden';
+gsap.to(tk,{x:()=>-dist(),ease:'none',scrollTrigger:{trigger:lb,start:'top top',end:()=>'+='+dist(),pin:true,scrub:true,invalidateOnRefresh:true}});
+
+/* Solo con mouse: cursor dorado, botones magnéticos y vista previa de servicios */
+if(fine){
+  document.documentElement.classList.add('fx');
+  const cur=$('.cur');
+  gsap.set(cur,{xPercent:-50,yPercent:-50});
+  const qx=gsap.quickTo(cur,'x',{duration:.35,ease:'power3'}),qy=gsap.quickTo(cur,'y',{duration:.35,ease:'power3'});
+  addEventListener('mousemove',e=>{cur.style.opacity=1;qx(e.clientX);qy(e.clientY)});
+  $$('[data-cur]').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{cur.textContent=el.dataset.cur;gsap.to(cur,{width:84,height:84,duration:.3})});
+    el.addEventListener('mouseleave',()=>{cur.textContent='';gsap.to(cur,{width:14,height:14,duration:.3})});
+  });
+  $$('.mag').forEach(b=>{
+    b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.35,y:(e.clientY-r.top-r.height/2)*.35,duration:.3})});
+    b.addEventListener('mouseleave',()=>gsap.to(b,{x:0,y:0,duration:.6,ease:'elastic.out(1,.4)'}));
+  });
+  const pv=$('.pv'),px=gsap.quickTo(pv,'x',{duration:.5,ease:'power3'}),py=gsap.quickTo(pv,'y',{duration:.5,ease:'power3'});
+  $$('.svc').forEach(s=>{
+    s.addEventListener('mouseenter',()=>{pv.textContent=s.querySelector('h3').textContent;gsap.to(pv,{opacity:1,duration:.3})});
+    s.addEventListener('mouseleave',()=>gsap.to(pv,{opacity:0,duration:.3}));
+    s.addEventListener('mousemove',e=>{px(e.clientX+24);py(e.clientY-140)});
+  });
+}
+})();
+</script>
+</body>
+</html>
